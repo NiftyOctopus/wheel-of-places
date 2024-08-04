@@ -21,6 +21,12 @@ const geocode = async () => {
 }
 
 
+// Make a call to get places
+// This will again to to the proxy server but with the /places endpoint
+// The request format should be for the google nearby places API (new)
+
+
+
 </script>
 
 <style scoped>
