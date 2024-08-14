@@ -7,6 +7,7 @@
     <input type="text" v-model="address" placeholder="Enter address">
     <p>Address: {{ address }}</p>
     <p>Location: {{ location }}</p>
+    <MySelect/>
     <button @click="getPlaces">Get Places!</button>
     <p>{{ places }}</p>
     <Roulette ref="wheel" :items="items" horizontal-content @click="launchWheel" />
@@ -17,6 +18,8 @@
 
 import { ref, computed } from 'vue'
 import { Roulette } from 'vue3-roulette'
+
+import MySelect from '@/components/MySelect.vue'
 
 const address = ref('')
 
