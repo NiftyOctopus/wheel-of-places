@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="flex flex-col gap-3">
     <h1>Welcome to the Wheel View!</h1>
-    <p>This is a simple Vue component.</p>
     <button @click="getLocation">Get Location!</button>
     <button @click="geocode">Geocode!</button>
     <input type="text" v-model="address" placeholder="Enter address">
     <p>Address: {{ address }}</p>
     <p>Location: {{ location }}</p>
+    <LocationCard/>
     <MySelect/>
     <button @click="getPlaces">Get Places!</button>
     <p>{{ places }}</p>
@@ -20,6 +20,7 @@ import { ref, computed } from 'vue'
 import { Roulette } from 'vue3-roulette'
 
 import MySelect from '@/components/MySelect.vue'
+import LocationCard from '@/components/LocationCard.vue';
 
 const address = ref('')
 
